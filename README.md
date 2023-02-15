@@ -50,6 +50,7 @@ Important! Please make sure you have checked the "New ECS Experience" checkbox b
 * Under the "Tasks" tab, verify that the task status is "RUNNING".
 * In the same service detail page, look under the  "Load Balancing" section and under "load balancer name", you should see a link to your Load Balancer.
 * Click on the Load Balancer link to view the load balancer configuration and verify that it is correctly routing traffic to your ECS service.
+* Verify by copy/pasting the load balancer domain name into your browser 
 
 ## Run load tests against your own load balancer
 
@@ -149,6 +150,11 @@ Your report might look something like this
      vus............................: 10     min=10     max=10
      vus_max........................: 10     min=10     max=10```
 ```
+
+# Extra tasks 
+
+* Look more into Ramp ups and how to use options https://k6.io/docs/get-started/running-k6/
+* How much can you stress the application? What will break first? Cloud 9 or the app?
 
 # Conclusion 
 
