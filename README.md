@@ -1,11 +1,16 @@
 # GOAL 
 
-In this exercise we will 
+The goal of this task is to gain hands-on experience with ELB and ECS, and to understand the benefits and tradeoffs of using this combination for scalable and resilient containerized workloads on AWS.
 
-* How to write- and run load tests using the K6 load test tool 
-* Inspect and look at containers running in a load balanced environment in AWS
-* Test robustness of a system with a single running system- by removing processes while performing tests 
-* Add more processes to the load balanced environment and see that the system is resilient to a failure in one of the processes
+We will look into 
+
+* Elastic Load Balancing (ELB) is an AWS service that automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones.
+* Amazon Elastic Container Service (ECS) is a fully-managed container orchestration service that makes it easy to run, stop, and manage Docker containers on a cluster of EC2 instances.
+* Using ECS with ELB can help ensure high availability, scalability, and fault tolerance for containerized applications running on AWS.
+* The task at hand is to explore and test the use of ELB with ECS to distribute traffic to multiple containers running in a cluster.
+* This will involve inspecting an existing  ECS cluster, and testing the load balancing behavior using various the K6 load test framework. 
+* How to write- and run load tests using the K6 load test tool
+
 
 ## Log in to your AWS Cloud9  environment
 
@@ -30,7 +35,7 @@ The number #1 problem for most students using Cloud9 is that they forget to expl
 Clone this repository into your cloud 9 environment. Use the Terminal on the bottom of the screen in your cloud 9 environment
 
 ```text
-git clone https://github.com/glennbechdevops/unleash-feature-management
+git clone https://github.com/glennbechdevops/scaling-availability
 ```
 
 ## Inspect your load balancer 
