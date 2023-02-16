@@ -156,6 +156,7 @@ Your report might look something like this
 
 * Look more into Ramp ups and how to use options https://k6.io/docs/get-started/running-k6/
 * How much can you stress the application? What will break first? Cloud 9 or the app?
+* Sjekk ut hvordan man kan integrere med Cloud løsningen her ; https://k6.io/docs/cloud/creating-and-running-a-test/cloud-tests-from-the-cli/
 
 # Conclusion 
 
