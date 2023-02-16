@@ -42,6 +42,7 @@ git clone https://github.com/glennbechdevops/scaling-availability
 
 Important! Please make sure you have checked the "New ECS Experience" checkbox before following instructions. 
 
+![alt text](images/newexperience.png "New Experience")
 
 * Open the AWS Management Console in your web browser.
 * Navigate to the "Elastic Container Service" service using the search bar or by selecting it from the list of services.
@@ -55,7 +56,7 @@ Important! Please make sure you have checked the "New ECS Experience" checkbox b
 ## Run load tests against your own load balancer
 
 * In your cloud9 environment, locate the file called ~/environment/scaling-availability/k6/simpletest.js
-* Modify the statement ```http.get("");``` and insert your load balancer domain name 
+* Modify the statement ```http.get("");``` and insert your load balancer domain name, prefixed with ```http://``` example: http://glennbech-alb-12121212.eu-west-1.elb.amazonaws.com
 * Run a simple load test against your ECS service 
 
 ```shell
@@ -158,6 +159,6 @@ Your report might look something like this
 
 # Conclusion 
 
-* In this lab you saw how we can make a system robust and resilient to failures by implementing load balancing and automatic scaling 
+'* In this lab you saw how we can make a system robust and resilient to failures by implementing load balancing and automatic scaling 
 * We also got a brief introduction to load testing with the K6 framework 
 * We dug a bit under the hood of ECS and saw how the concepts of tasks and services work.
