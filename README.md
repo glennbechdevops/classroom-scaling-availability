@@ -44,14 +44,14 @@ Important! Please make sure you have checked the "New ECS Experience" checkbox b
 
 ![alt text](images/newexperience.png "New Experience")
 
-* Open the AWS Management Console in your web browser.
-* Navigate to the "Elastic Container Service" service using the search bar or by selecting it from the list of services.
-* From the ECS dashboard, locate your ECS cluster by selecting it from the list of clusters. It should have your name or a name that you have assigned to it.
-* From the cluster view, select the service with your name on it. You should see one active task running (container) in the service detail page.
-* Under the "Tasks" tab, verify that the task status is "RUNNING".
-* In the same service detail page, look under the  "Load Balancing" section and under "load balancer name", you should see a link to your Load Balancer.
-* Click on the Load Balancer link to view the load balancer configuration and verify that it is correctly routing traffic to your ECS service.
-* Verify by copy/pasting the load balancer domain name into your browser 
+* Open your web browser and access the AWS Management Console.
+* Use the search bar or the services menu to find and select "Elastic Container Service (ECS)".
+* In the ECS dashboard, find and select your ECS cluster, identifiable by your name.
+* Within the cluster, click on the service named after you. You'll be directed to its details page.
+* On the service detail page, check the "Tasks" tab to ensure the task (container) status is "RUNNING".
+* Look for the "Load Balancing" section on this page. Under "Load Balancer Name", you'll find a clickable link to your Load Balancer.
+* Click this link to view and confirm the load balancer's configuration, ensuring it's properly directing traffic to your ECS service.
+* Test the setup by entering the load balancer's domain name in your browser's address bar.
 
 ## Run load tests against your own load balancer
 
@@ -126,7 +126,7 @@ By following the previous given instructions on how to stop a task, do exactly t
 Make sure not to stop both of them!
 
 Also notice that there will another task started very shortly after you stop one. This is because ECS tries to keep the 
-kast count at your _desred_ level. 
+kast count at your _desired_ level. 
 
 ## Observe that the load tests contain no/few failed requests
 
