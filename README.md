@@ -16,15 +16,17 @@ We will look into
 
 Go to the AWS Management Console (https://244530008913.signin.aws.amazon.com/console)
 
-* Enter your username (the first part of your email address, before the @ symbol) and the password provided in class.
-* Click on the "Sign In" button.
-* Once you are logged in, you will be directed to the AWS Management Console home page.
-* In the top left corner, you will see a navigation menu. Click on the "Services" button.
-* In the services menu, look for the "Cloud9" service.
-* Click on the Cloud9 service to open the Cloud9 dashboard.
-* You will now be able to see the list of environments that you have access to.
-* Select your environment
-* Familiarize yourself with Cloud9 by exploring and experimenting with the platform.
+* Start by entering your username, which is the part of your email before the '@' symbol, along 
+  with the password provided during class.
+* Click the "Sign In" button to proceed.
+* Once logged in, you'll land on the AWS Management Console home page.
+* Look to the top left corner for a navigation menu and click on the "Services" button.
+* Within the services menu, find and select "Cloud9".
+* This action will open the Cloud9 dashboard.
+* Here, you'll see a list of the environments available to you.
+* Choose your specific environment.
+* Take some time to explore and experiment with Cloud9, getting familiar with its features and 
+  interface.
 
 ## No auto save!
 
@@ -32,7 +34,7 @@ The number #1 problem for most students using Cloud9 is that they forget to expl
 
 ## Clone this repo
 
-Clone this repository into your cloud 9 environment. Use the Terminal on the bottom of the screen in your cloud 9 environment
+Clone this repository into your cloud 9 environment. Use the Terminal located on the bottom of the screen.
 
 ```text
 git clone https://github.com/glennbechdevops/scaling-availability
@@ -40,7 +42,7 @@ git clone https://github.com/glennbechdevops/scaling-availability
 
 ## Inspect your load balancer and ECS cluster 
 
-Important! Please make sure you have checked the "New ECS Experience" checkbox before following instructions. 
+Important! IF prompted - Please make sure you have checked the "New ECS Experience" checkbox before following instructions. 
 
 ![alt text](images/newexperience.png "New Experience")
 
@@ -49,7 +51,8 @@ Important! Please make sure you have checked the "New ECS Experience" checkbox b
 * In the ECS dashboard, find and select your ECS cluster, identifiable by your name.
 * Within the cluster, click on the service named after you. You'll be directed to its details page.
 * On the service detail page, check the "Tasks" tab to ensure the task (container) status is "RUNNING".
-* Look for the "Load Balancing" section on this page. Under "Load Balancer Name", you'll find a clickable link to your Load Balancer.
+* Navigate back to the "Health & Metrics" Tab
+* Look for the "Load Balancing" section on this page. Under "Load Balancer Name", you'll find a clickable link to your Load Balancer saying "View Load Balancer ->"
 * Click this link to view and confirm the load balancer's configuration, ensuring it's properly directing traffic to your ECS service.
 * Test the setup by entering the load balancer's domain name in your browser's address bar.
 
@@ -59,17 +62,28 @@ Important! Please make sure you have checked the "New ECS Experience" checkbox b
 * Modify the statement ```http.get("");``` and insert your load balancer domain name, prefixed with ```http://``` example: http://glennbech-alb-12121212.eu-west-1.elb.amazonaws.com
 * Run a simple load test against your ECS service 
 
+Navigate to the folder with the load tests 
+
+```shell
+cd scaling-availability
+cd k6
+```
+
+Run the load test to see that it's working
+
 ```shell
  docker run --rm -i grafana/k6 run --vus 10 --duration 30s - <simpletest.js
 ```
 * vus are "virtual users" or concurrent threads 
 * duration is as you might expect, how long the test will run 
+* Spend some time looking through the report.
+* Pay special attention to "http_req failed" to see that the test was successful 
 
 ## Extend the duration of the load test
 
-Run another test for 10 minutes 
+Run another test for 5 minutes 
 ```shell
- docker run --rm -i grafana/k6 run --vus 10 --duration 10m - <simpletest.js
+ docker run --rm -i grafana/k6 run --vus 10 --duration 5m - <simpletest.js
 ```
 
 ## Stop  a task while the test is running 
@@ -79,6 +93,9 @@ Run another test for 10 minutes
 * Click on the "Stop" Drop down located above the task list. chose "Stop selected"
 * In the confirmation dialog box, review the details of the task and click the "Stop" button to stop the task.
 * Wait for a few seconds for the task to stop, and then verify that its status has changed to "STOPPED". You can refresh the page to update the status.
+
+Did you notice that the ECS service re-started a task during your test, after you stopped it? 
+This is because the desired count is set to 1. 
 
 ## Observe that the load tests contain failures
 
@@ -104,6 +121,7 @@ Your report might look something like this
 ```
 
 * Observe that the errors under ```http_req_failed```
+
 ## Increase the desired task count 
 
 * From the ECS dashboard, select the cluster that your service is running on by clicking on its name.
