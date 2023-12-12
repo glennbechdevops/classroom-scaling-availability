@@ -1,3 +1,7 @@
+# Lab environment
+
+https://244530008913.signin.aws.amazon.com/console
+
 # GOAL 
 
 The goal of this task is to gain hands-on experience with ELB and ECS, and to understand the benefits and tradeoffs of using this combination for scalable and resilient containerized workloads on AWS.
