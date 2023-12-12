@@ -177,7 +177,9 @@ Your report might look something like this
 
 # Extra tasks 
 
+
 * Look more into Ramp ups and how to use options https://k6.io/docs/get-started/running-k6/
+* See you can break the system, reduce the capacity of containers if needed
 * How much can you stress the application? What will break first? Cloud 9 or the app?
 * Sjekk ut hvordan man kan integrere med Cloud løsningen her ; https://k6.io/docs/cloud/creating-and-running-a-test/cloud-tests-from-the-cli/
 
