@@ -65,7 +65,6 @@ Important! IF prompted - Please make sure you have checked the "New ECS Experien
 
 * In your cloud9 environment, locate the file called ~/environment/scaling-availability/k6/simpletest.js
 * Modify the statement ```http.get("");``` and insert your load balancer domain name, prefixed with ```http://``` example: http://glennbech-alb-12121212.eu-west-1.elb.amazonaws.com
-* Run a simple load test against your ECS service 
 
 Navigate to the folder with the load tests 
 
