@@ -1,7 +1,7 @@
 # Lab environment
 
 * https://244530008913.signin.aws.amazon.com/console
-* Username: student<n>
+* Username: student_n
 
 # GOAL 
 
