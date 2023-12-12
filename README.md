@@ -1,5 +1,6 @@
 # Lab environment
 
+* Break it ! student1-alb-1423413645.eu-west-1.elb.amazonaws.com
 * https://244530008913.signin.aws.amazon.com/console
 * Username: studentn
 
