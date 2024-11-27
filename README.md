@@ -99,7 +99,7 @@ git clone https://github.com/glennbechdevops/scaling-availability
 
 ## Run a K6 load test against your own load balancer
 
-* In your cloud9 environment, using the file navigator on the left side. locate the file called ~/environment/scaling-availability/k6/simpletest.js
+* In your cloud9 environment, using the file navigator on the left side. locate the file called ``scaling-availability/k6/simpletest.js`
 * Modify the statement ```http.get("");``` and insert your load balancer domain name, prefixed with ```http://``` example: http://glennbech-alb-12121212.eu-west-1.elb.amazonaws.com
 
 Navigate to the folder with the load tests 
