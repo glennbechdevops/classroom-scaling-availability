@@ -189,7 +189,7 @@ By following the previous given instructions on how to stop a task, do exactly t
 Make sure not to stop both of them!
 
 Also notice that there will another task started very shortly after you stop one. This is because ECS tries to keep the 
-kast count at your _desired_ level. 
+task count at your _desired_ level. 
 
 ## Observe that the load tests contain no/few failed requests
 
