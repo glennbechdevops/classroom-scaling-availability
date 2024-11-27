@@ -1,10 +1,9 @@
-# Lab environment
+# LAB - RESILIENT ARCHITECTURE BASED ON AWS ECS AND CONTAINERS
 
-* Break it ! student1-alb-1423413645.eu-west-1.elb.amazonaws.com
 * https://244530008913.signin.aws.amazon.com/console
 * Username: studentn
 
-# GOAL 
+## GOAL 
 
 The goal of this task is to gain hands-on experience with ELB and ECS, and to understand the benefits and tradeoffs of using this combination for scalable and resilient containerized workloads on AWS.
 
