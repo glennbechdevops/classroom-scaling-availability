@@ -73,6 +73,7 @@ Important! IF prompted - Please make sure you have checked the "New ECS Experien
 In You will now see that the system is robust, and responds to system failure. If the one task that is running fails, AWS will launch 
 a substitute. 
 
+* Navigate back to the ECS cluster page https://eu-north-1.console.aws.amazon.com/ecs/v2/clusters?region=eu-north-1
 * From the ECS dashboard, select the cluster that your task is running on by clicking on its name.
 * Under the "Tasks" tab, find the single running task and select the checkbox next to it.
 * Click on the "Stop" Drop down located above the task list. chose "Stop selected"
