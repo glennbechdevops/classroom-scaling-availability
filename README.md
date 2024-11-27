@@ -142,7 +142,7 @@ Run another test for 5 minutes, continue with the exercise while this load test 
 
 Using the previous description, try  to stop  a task
 
-## Observe that the load tests again contain failures! :-(
+## Observe that the load tests contain failures! :-(
 
 Your report might look something like this 
 
