@@ -169,8 +169,8 @@ Your report might look something like this
 
 ## Increase the desired task count 
 
-* From the ECS dashboard, select the cluster that your service is running on by clicking on its name.
-* Under the "Services" tab, find the service that you want to update and click on its name to view its details.
+* From the ECS dashboard, select the cluster with your name. Click on its name.
+* Under the "Services" tab, find the service with your name, click on its name to view its details.
 * In the service detail page, click on the "Update Service" button to modify the service configuration.
 * In the "Desired tasks" field, enter the desired number of tasks (2) that you want to run for the service. You can set this value between the minimum and maximum value specified in the service capacity settings.
 * Oce you have made the desired changes, review the configuration details and click the "Update" button to save the changes.
