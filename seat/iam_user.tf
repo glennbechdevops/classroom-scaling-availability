@@ -26,6 +26,7 @@ resource "aws_iam_user_policy" "student_policy" {
         "ecs:*",
         "lambda:*",
         "api:*",
+        "application-autoscaling:*",
         "apigateway:*",
         "execute-api:*",
         "ecr:*",
