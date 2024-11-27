@@ -97,11 +97,9 @@ a substitute.
 Did you notice that the ECS service re-started a task during your test, after you stopped it? 
 This is because the desired count is set to 1. 
 
-This is pretty resiliant, right? But we'll make it better in part 2
+This is pretty resiliant, right? But we'll make it better in part 2. 
 
-
-
-# Part 2
+# Part 2 - Load testing with K6 and multiple tasks
 
 
 ## Run a load tests against your own load balancer
