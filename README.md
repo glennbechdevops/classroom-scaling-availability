@@ -40,8 +40,7 @@ This setup demonstrates a modern, serverless architecture for deploying a web ap
 
 Go to the AWS Management Console (https://244530008913.signin.aws.amazon.com/console)
 
-* Start by entering your username, which is the part of your email before the '@' symbol, along 
-  with the password provided during class.
+* Start by entering your username and password given during class.
 * Click the "Sign In" button to proceed.
 * Once logged in, you'll land on the AWS Management Console home page.
 * Switch to the Stockholm region (eu-north-1) - Look for a region name on the top menu
