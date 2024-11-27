@@ -133,7 +133,7 @@ Some key metrics and example values
 
 ## Extend the duration of the load test
 
-Run another test for 5 minutes 
+Run another test for 5 minutes, continue with the exercise while this load test is running.  
 ```shell
  docker run --rm -i grafana/k6 run --vus 10 --duration 5m - <simpletest.js
 ```
@@ -142,8 +142,7 @@ Run another test for 5 minutes
 
 Using the previous description, try  to stop  a task
 
-
-## Observe that the load tests contain failures!
+## Observe that the load tests again contain failures! :-(
 
 Your report might look something like this 
 
