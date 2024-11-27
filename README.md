@@ -76,7 +76,7 @@ a substitute.
 * Navigate back to the ECS cluster page https://eu-north-1.console.aws.amazon.com/ecs/v2/clusters?region=eu-north-1
 * From the ECS dashboard, select the cluster with your name
 * Under the "Tasks" tab, find the single running task and select the checkbox next to it.
-* Click on the "Stop" Drop down located above the task list. chose "Stop selected"
+* Click on the "Stop" Drop down item located on the right side above the running tasks. Select "Stop Selected"
 * In the confirmation dialog box, review the details of the task and click the "Stop" button to stop the task.
 * Wait for a few seconds for the task to stop, and then verify that its status has changed to "STOPPED". You can refresh the page to update the status.
 
