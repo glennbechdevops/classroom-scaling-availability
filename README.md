@@ -90,7 +90,8 @@ K6 is an open-source load testing tool designed for developers to test the perfo
 
 ## Clone this repo
 
-Clone this repository into your cloud 9 environment. Use the Terminal located on the bottom of the screen.
+* Go to your Cloud 9 environment 
+* Clone this repository with GIT, Use the Terminal located on the bottom of the screen.
 
 ```text
 git clone https://github.com/glennbechdevops/scaling-availability
