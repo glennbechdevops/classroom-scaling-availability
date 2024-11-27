@@ -7,7 +7,7 @@
 
 In this exercise we will look into ... 
 
-* Elastic Load Balancing (ELB) is an AWS service that automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones.
+* Elastic Load Balancing (ELB) is an AWS service that automatically distributes incoming application traffic across multiple targets, such as virtual servers (EC2), docker containers, and IP addresses, across one or more Availability Zones.
 * Amazon Elastic Container Service (ECS) is a fully-managed container orchestration service that makes it easy to run, stop, and manage Docker containers on a cluster of EC2 instances.
 * Using ECS with ELB can help ensure high availability, scalability, and fault tolerance for containerized applications running on AWS.
 * The task at hand is to explore and test the use of ELB with ECS to distribute traffic to multiple containers running in a cluster.
