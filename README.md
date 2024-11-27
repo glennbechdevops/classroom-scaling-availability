@@ -80,8 +80,7 @@ a substitute.
 * In the confirmation dialog box, review the details of the task and click the "Stop" button to stop the task.
 * Wait for a few seconds for the task to stop, and then verify that its status has changed to "STOPPED". You can refresh the page to update the status.
 
-Did you notice that the ECS service re-started a task during your test, after you stopped it? 
-This is because the desired count is set to 1. 
+Did you notice that the ECS service started  a task after your stopped the other one? This is because the desired count is set to 1 for the auto scaling group 
 
 This is pretty resiliant, right? But we'll make it better in part 2. 
 
