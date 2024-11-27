@@ -36,7 +36,7 @@ This setup demonstrates a modern, serverless architecture for deploying a web ap
 - [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 
-
+# Part 1
 
 ## Log in to your AWS Cloud9  environment
 
@@ -82,7 +82,29 @@ Important! IF prompted - Please make sure you have checked the "New ECS Experien
 * Look for the "Load balancer health" section on this page. Click "View Load Balancer ->"
 * Test the setup by entering the load balancer's domain name in your browser's address bar.
 
-## Run load tests against your own load balancer
+
+## Check robustnes! Stop  a task while the test is running 
+
+In this task you will see that the system is robust, and responds to system failure. If the one task that is running fails, AWS will launch 
+a substitute. 
+
+* From the ECS dashboard, select the cluster that your task is running on by clicking on its name.
+* Under the "Tasks" tab, find the single running task and select the checkbox next to it.
+* Click on the "Stop" Drop down located above the task list. chose "Stop selected"
+* In the confirmation dialog box, review the details of the task and click the "Stop" button to stop the task.
+* Wait for a few seconds for the task to stop, and then verify that its status has changed to "STOPPED". You can refresh the page to update the status.
+
+Did you notice that the ECS service re-started a task during your test, after you stopped it? 
+This is because the desired count is set to 1. 
+
+This is pretty resiliant, right? But we'll make it better in part 2
+
+
+
+# Part 2
+
+
+## Run a load tests against your own load balancer
 
 * In your cloud9 environment, locate the file called ~/environment/scaling-availability/k6/simpletest.js
 * Modify the statement ```http.get("");``` and insert your load balancer domain name, prefixed with ```http://``` example: http://glennbech-alb-12121212.eu-west-1.elb.amazonaws.com
@@ -123,19 +145,10 @@ Run another test for 5 minutes
  docker run --rm -i grafana/k6 run --vus 10 --duration 5m - <simpletest.js
 ```
 
-## Check robustnes! Stop  a task while the test is running 
+## Stop a task
 
-In this task you will see that the system is robust to system failure. If the one task that is running fails, AWS will launch 
-a substitute. 
+Using the previous description, try  to stop  a task
 
-* From the ECS dashboard, select the cluster that your task is running on by clicking on its name.
-* Under the "Tasks" tab, find the single running task and select the checkbox next to it.
-* Click on the "Stop" Drop down located above the task list. chose "Stop selected"
-* In the confirmation dialog box, review the details of the task and click the "Stop" button to stop the task.
-* Wait for a few seconds for the task to stop, and then verify that its status has changed to "STOPPED". You can refresh the page to update the status.
-
-Did you notice that the ECS service re-started a task during your test, after you stopped it? 
-This is because the desired count is set to 1. 
 
 ## Observe that the load tests contain failures!
 
