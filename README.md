@@ -55,18 +55,6 @@ Go to the AWS Management Console (https://244530008913.signin.aws.amazon.com/con
 * Take some time to explore and experiment with Cloud9, getting familiar with its features and 
   interface.
 
-## No auto save!
-
-The number #1 problem for most students using Cloud9 is that they forget to explicitly save files  - as there is no auto save!
-
-## Clone this repo
-
-Clone this repository into your cloud 9 environment. Use the Terminal located on the bottom of the screen.
-
-```text
-git clone https://github.com/glennbechdevops/scaling-availability
-```
-
 ## Inspect your load balancer and ECS cluster 
 
 Important! IF prompted - Please make sure you have checked the "New ECS Experience" checkbox before following instructions. 
@@ -101,6 +89,17 @@ This is pretty resiliant, right? But we'll make it better in part 2.
 
 # Part 2 - Load testing with K6 and multiple tasks
 
+## No auto save!
+
+The number #1 problem for most students using Cloud9 is that they forget to explicitly save files  - as there is no auto save!
+
+## Clone this repo
+
+Clone this repository into your cloud 9 environment. Use the Terminal located on the bottom of the screen.
+
+```text
+git clone https://github.com/glennbechdevops/scaling-availability
+```
 
 ## Run a load tests against your own load balancer
 
