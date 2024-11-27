@@ -26,6 +26,7 @@ Go to the AWS Management Console (https://244530008913.signin.aws.amazon.com/con
   with the password provided during class.
 * Click the "Sign In" button to proceed.
 * Once logged in, you'll land on the AWS Management Console home page.
+* Switch to the Stockholm region (eu-north-1) - Look for a region name on the top menu
 * Look to the top left corner for a navigation menu and click on the "Services" button.
 * Within the services menu, find and select "Cloud9".
 * This action will open the Cloud9 dashboard.
@@ -58,8 +59,7 @@ Important! IF prompted - Please make sure you have checked the "New ECS Experien
 * Within the cluster, click on the service named after you. You'll be directed to its details page.
 * On the service detail page, check the "Tasks" tab to ensure the task (container) status is "RUNNING".
 * Navigate back to the "Health & Metrics" Tab
-* Look for the "Load Balancing" section on this page. Under "Load Balancer Name", you'll find a clickable link to your Load Balancer saying "View Load Balancer ->"
-* Click this link to view and confirm the load balancer's configuration, ensuring it's properly directing traffic to your ECS service.
+* Look for the "Load balancer health" section on this page. Click "View Load Balancer ->"
 * Test the setup by entering the load balancer's domain name in your browser's address bar.
 
 ## Run load tests against your own load balancer
@@ -80,9 +80,21 @@ Run the load test to see that it's working
  docker run --rm -i grafana/k6 run --vus 10 --duration 30s - <simpletest.js
 ```
 * vus are "virtual users" or concurrent threads 
-* duration is as you might expect, how long the test will run 
+* duration is as you might expect, how long the test will run
+
+When the test is finished you will see a report like this ; 
+
+<img width="1193" alt="image" src="https://github.com/user-attachments/assets/449f29ae-87b8-4b9c-bce7-e1ea97c5a0cd">
+
 * Spend some time looking through the report.
 * Pay special attention to "http_req failed" to see that the test was successful 
+
+Some key metrics and example values 
+
+- **`http_req_duration`**: Average request duration is `3.17ms` (90% complete within `4.12ms`), indicating good responsiveness.  
+- **`http_reqs`**: 300 total requests at ~9.96 requests/second, reflecting test throughput.  
+- **`http_req_failed`**: 0% failure rate, showing high reliability under load.  
+- **`http_req_waiting`**: Average server processing time is `3.06ms` (90% complete within `4.01ms`).  
 
 ## Extend the duration of the load test
 
@@ -91,7 +103,10 @@ Run another test for 5 minutes
  docker run --rm -i grafana/k6 run --vus 10 --duration 5m - <simpletest.js
 ```
 
-## Stop  a task while the test is running 
+## Check robustnes! Stop  a task while the test is running 
+
+In this task you will see that the system is robust to system failure. If the one task that is running fails, AWS will launch 
+a substitute. 
 
 * From the ECS dashboard, select the cluster that your task is running on by clicking on its name.
 * Under the "Tasks" tab, find the single running task and select the checkbox next to it.
@@ -102,7 +117,7 @@ Run another test for 5 minutes
 Did you notice that the ECS service re-started a task during your test, after you stopped it? 
 This is because the desired count is set to 1. 
 
-## Observe that the load tests contain failures
+## Observe that the load tests contain failures!
 
 Your report might look something like this 
 
