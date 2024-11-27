@@ -180,7 +180,7 @@ Your report might look something like this
 
 From your Cloud9 environment, run another test for 10 minutes
 ```shell
- docker run --rm -i grafana/k6 run --vus 10 --duration 10m - <simpletest.js
+ docker run --rm -i grafana/k6 run --vus 10 --duration 5m - <simpletest.js
 ```
 
 ## Stop as single task to simulate a failure
