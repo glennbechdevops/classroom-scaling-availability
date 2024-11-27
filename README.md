@@ -36,7 +36,7 @@ This setup demonstrates a modern, serverless architecture for deploying a web ap
 - [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 
-# Part 1
+# Part 1 Intro to Elastic Container Service. Load balancers, Services and tasks
 
 ## Log in to your AWS Cloud9  environment
 
