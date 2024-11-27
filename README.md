@@ -86,9 +86,7 @@ This is pretty resiliant, right? But we'll make it better in part 2.
 
 # Part 2 - Load testing with K6 and multiple tasks
 
-## No auto save!
-
-The number #1 problem for most students using Cloud9 is that they forget to explicitly save files  - as there is no auto save!
+K6 is an open-source load testing tool designed for developers to test the performance and reliability of APIs, web applications, and microservices. It is lightweight, scriptable using JavaScript, and integrates easily into CI/CD pipelines, making it ideal for both local testing and automation.
 
 ## Clone this repo
 
