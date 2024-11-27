@@ -66,8 +66,7 @@ Important! IF prompted - Please make sure you have checked the "New ECS Experien
 * Navigate back to the "Health & Metrics" Tab
 * Look for the "Load balancer health" section on this page. Click "View Load Balancer ->"
 * Find the value for the "DNS name"
-* Test the setup by entering the load balancer'sDNS in your browser's address bar.
-
+* Test the setup by entering the load balancer's DNS in your browser's address bar.
 
 ## Check robustnes! Stop  a task while the test is running 
 
