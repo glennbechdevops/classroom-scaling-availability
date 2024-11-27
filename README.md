@@ -70,7 +70,7 @@ Important! IF prompted - Please make sure you have checked the "New ECS Experien
 
 ## Check robustnes! Stop  a task while the test is running 
 
-In this task you will see that the system is robust, and responds to system failure. If the one task that is running fails, AWS will launch 
+In You will now see that the system is robust, and responds to system failure. If the one task that is running fails, AWS will launch 
 a substitute. 
 
 * From the ECS dashboard, select the cluster that your task is running on by clicking on its name.
