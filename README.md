@@ -17,6 +17,27 @@ We will look into
 * This will involve inspecting an existing  ECS cluster, and testing the load balancing behavior using various the K6 load test framework. 
 * How to write- and run load tests using the K6 load test tool
 
+## Description of the infrastructure made for you in the lab 
+
+This Terraform configuration sets up a serverless infrastructure on AWS to run a containerized application using Amazon ECS and Fargate. The core goal is to deploy a simple web application (`crccheck/hello-world`) that is publicly accessible through an Application Load Balancer (ALB).
+
+The infrastructure leverages an existing Virtual Private Cloud (VPC) and its associated subnets. The ECS cluster serves as the foundational control plane for managing the containerized workload. A task definition specifies how the container is configured, including its compute resources, networking mode, and the image to be deployed. The Fargate launch type is used to abstract server management, allowing the container to run without provisioning or maintaining underlying compute instances.
+
+To ensure secure and efficient communication, the configuration uses security groups. The ALB, which serves as the public entry point, is configured to accept traffic over HTTP (port 80) and forward it to the ECS service. The service, in turn, communicates with the container running on port 8000. The container's health is monitored through periodic checks, ensuring high availability and reliability.
+
+IAM roles and policies provide the necessary permissions for the ECS tasks, such as pulling container images and sending logs to AWS services. The load balancer distributes incoming requests across tasks and performs health checks to route traffic only to healthy instances.
+
+This setup demonstrates a modern, serverless architecture for deploying a web application with scalability and minimal operational overhead. Resources are dynamically allocated, and the use of managed services like Fargate and ALB simplifies application deployment and maintenance.
+
+---
+
+### Learn More:
+- [Amazon ECS and Fargate Overview](https://aws.amazon.com/ecs/)
+- [Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
+- [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+
+
+
 
 ## Log in to your AWS Cloud9  environment
 
