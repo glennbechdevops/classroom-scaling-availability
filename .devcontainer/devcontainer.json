@@ -1,0 +1,11 @@
+{
+  "name": "Terraform AWS CLI Docker",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "docker-in-docker": {}
+  },
+  "postCreateCommand": "terraform --version && aws --version && docker --version",
+  "remoteUser": "vscode"
+}
