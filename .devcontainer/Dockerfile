@@ -1,6 +1,6 @@
 # .devcontainer/Dockerfile
 # Use a base image that includes Docker (Docker in Docker setup)
-FROM mcr.microsoft.com/devcontainers/docker:1
+FROM mcr.microsoft.com/devcontainers/python:dev-3.9-bookworm
 
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg \
