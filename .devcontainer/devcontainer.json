@@ -6,6 +6,10 @@
   "features": {
     "docker-in-docker": {}
   },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
+  },
   "postCreateCommand": "terraform --version && aws --version && docker --version",
   "remoteUser": "vscode"
 }
