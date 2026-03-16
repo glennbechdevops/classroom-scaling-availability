@@ -1,7 +1,7 @@
 # LAB - RESILIENT ARCHITECTURE BASED ON AWS ECS AND CONTAINERS
 
 * https://244530008913.signin.aws.amazon.com/console
-* Username: studentn
+* Username: seat#n
 
 ## GOAL 
 
